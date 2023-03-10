@@ -17,7 +17,7 @@ app.get('/gabt', (req, res) => {
 })
 
 app.get('/api/getproductpricing', (req, res) => {
-    fetch('https://mingle-ionapi.inforcloudsuite.com/D7NMH8MYY885DBPS_TRN/SX/rest/sxapirestservice/sxapioepricingv5', {
+    fetch(`${process.env.API_ENDPOINT}/sxapioepricingv5`, {
             method: 'POST',
             headers: {
                 "Authorization": req.headers.authorization
